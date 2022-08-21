@@ -42,5 +42,5 @@ def read_roleUsers(encryptedToken: str):
         return {"encryptedToken": encryptedToken, "role": wRole, "expirationDate": wExpirationDate, }
     else:
         logging.error('Failed to execute GET method')
-        return {"HTTP status code 204: NoContent"}
+        return {"HTTP status code 204: No Content"}
     
