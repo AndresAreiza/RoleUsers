@@ -37,13 +37,9 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
-    - name: Report Status
-      if: always()
-      uses: ravsamhq/notify-slack-action@v2
-      with:
-        status: success
-        notify_when: 'success'
-        mention_users: "U03UGH7MH42, U03UGH8RSTU"
-        mention_users_when: "success"
+    - name: Notify slack
       env:
-        SLACK_WEBHOOK_URL: https://hooks.slack.com/services/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
+        SLACK_BOT_TOKEN: xoxb-3971039921012-3962016572086-9uSvdLwHtYbMPsWNjPstLVKi
+      uses: pullreminders/slack-action@master
+      with:
+        args: '{\"channel\":\"C03V689AM4Y\",\"text\":\"Hello world\"}'
