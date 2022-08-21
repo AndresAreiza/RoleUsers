@@ -12,7 +12,7 @@ logging.basicConfig(
     filemode='w'
 )
 
-app = FastAPI()
+app = FastAPI().falla
 
 @app.get("/")
 def getRoleUsers():
